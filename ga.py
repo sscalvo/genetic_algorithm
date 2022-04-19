@@ -10,7 +10,7 @@ from ga_utils.extras import choices_with_replacement
 Linspace = List[int] # Evenly spaced numbers over a specified interval
 Parameter = namedtuple('Parameter', ['name', 'min_val', 'max_val'])
 Genome = List[float] # Random set of values, one for each parameter, within their defined boundaries
-GenomeX = Tuple[Genome, float] # A Genome and the it's rating provided by the Model through the fitness method
+GenomeX = Tuple[Genome, float] # A Genome and the it's score (provided by the Model through the eval method)
 Population = List[GenomeX]
 PopulateFunc = Callable[[], Population]
 FitnessFunc = Callable[[Genome], GenomeX]
